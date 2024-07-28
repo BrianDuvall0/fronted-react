@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 
 import PostPage from "./pages/PostPage.jsx";
 import PostForm from "./pages/PostForm.jsx";
+import Login from "./pages/Login.jsx";
+import Registro from "./pages/Registro.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 import NavBar from "./components/NavBar.jsx";
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<PostPage/>}/>
           <Route path="/new" element={<PostForm/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/registro" element={<Registro/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </>
