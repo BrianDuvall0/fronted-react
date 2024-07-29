@@ -18,12 +18,16 @@ function Login() {
             });
 
             const result = await response.json();
-            console.log('Success:', result);
+            console.log('Success:', result); // Verifica la respuesta del backend
 
             if (response.ok) {
-                // Guarda el token en el localStorage o sessionStorage
+                // Guarda el token y userId en localStorage
                 localStorage.setItem('jwt', result.token);
-                
+                localStorage.setItem('userId', result.userId); // Guarda el userId
+
+                console.log('Token:', localStorage.getItem('jwt')); // Verifica el token
+                console.log('UserId:', localStorage.getItem('userId')); // Verifica el userId
+
                 // Redirige al usuario a la página de inicio
                 navigate('/home');
             } else {
