@@ -45,7 +45,6 @@ function PostPage() {
         data.map((post) => (
           <Card 
             key={post.id} 
-            title={post.userId} // Mostrar el username en lugar de userId
             description={post.content} 
           />
         ))
