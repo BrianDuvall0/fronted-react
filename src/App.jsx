@@ -7,26 +7,24 @@ import Login from "./pages/PageLogin.jsx";
 import Registro from "./pages/Registro.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
-import NavBar from "./components/NavBar.jsx";
-
 function App() {
 
   return(
 
       <>
 
-        <NavBar></NavBar>
-
         <Routes>
-          <Route path="/" element={<PostPage/>}/>
+          <Route path="/" element={<Login/>}/>
+          <Route path="/registro" element={<Registro/>}/>
+
+          <Route path="/pots" element={<PostPage/>}/>
           <Route path="/home" element={<PageHome/>}/>
           <Route path="/new" element={<PostForm/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/registro" element={<Registro/>}/>
+        
           <Route path="*" element={<NotFound/>}/>
         </Routes>
+      
       </>
-
   )
 }
 
